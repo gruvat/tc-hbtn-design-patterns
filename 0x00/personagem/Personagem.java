@@ -25,7 +25,7 @@ public abstract class Personagem {
                     + ", vigor = " + vigor
                     + ", resistencia = " + resistencia
                     + ", destreza = " + destreza
-                    + ", dano = " + String.format("%.2f", getDanoAtaque())
+                    + ", dano ataque = " + String.format("%.2f", getDanoAtaque())
                     + " }";
     }
 
