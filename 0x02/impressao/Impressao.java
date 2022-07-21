@@ -30,7 +30,7 @@ public class Impressao {
     @Override
     public String toString() {
         String tipo = (ehFrenteVerso) ? "frente e verso" : "frente";
-        return String.format("total de paginas: %d, total coloridas: %d, total preto e branco: %d, %s. total: R$ %.2f \n", 
+        return String.format("total de paginas: %d, total coloridas: %d, total preto e branco: %d, %s. total: R$ %.2f", 
             paginasTotais,
             paginasColoridas,
             paginasTotais-paginasColoridas,
