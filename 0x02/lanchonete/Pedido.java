@@ -22,9 +22,18 @@ public class Pedido {
     @Override
     public String toString() {
         String prt = "	Fora da Caixa:" + System.lineSeparator();
+        Boolean flag = false;
 
         for (ItemPedido ip : itensForaCaixa) {
-            prt += String.format("		- %s %s", ip.getTipo().name(), ip.getNome()) + System.lineSeparator();
+            if(ip.getTipo().name().equals("LANCHE")) {
+                flag = true;
+            } else {
+                prt += String.format("		- %s %s", ip.getTipo().name(), ip.getNome()) + System.lineSeparator();
+            }
+        }
+
+        if (flag) {
+            prt += "		- LANCHE CHEESEBURGUER" + System.lineSeparator();
         }
 
         prt += "	Dentro da Caixa:" + System.lineSeparator();
