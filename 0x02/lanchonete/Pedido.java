@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Pedido {
 
@@ -20,20 +21,24 @@ public class Pedido {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pedido pedido = (Pedido) o;
+        return itensDentroCaixa.equals(pedido.itensDentroCaixa) && itensForaCaixa.equals(pedido.itensForaCaixa);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(itensDentroCaixa, itensForaCaixa);
+    }
+
+    @Override
     public String toString() {
         String prt = "	Fora da Caixa:" + System.lineSeparator();
-        Boolean flag = false;
 
         for (ItemPedido ip : itensForaCaixa) {
-            if(ip.getTipo().name().equals("LANCHE")) {
-                flag = true;
-            } else {
-                prt += String.format("		- %s %s", ip.getTipo().name(), ip.getNome()) + System.lineSeparator();
-            }
-        }
-
-        if (flag) {
-            prt += "		- LANCHE CHEESEBURGUER" + System.lineSeparator();
+            prt += String.format("		- %s %s", ip.getTipo().name(), ip.getNome()) + System.lineSeparator();
         }
 
         prt += "	Dentro da Caixa:" + System.lineSeparator();

@@ -16,33 +16,20 @@ public class ItemPedido {
     }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        result = prime * result + ((tipo == null) ? 0 : tipo.hashCode());
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ItemPedido that = (ItemPedido) o;
+        return tipo == that.tipo && nome.equals(that.nome);
     }
+    
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        ItemPedido other = (ItemPedido) obj;
-        if (nome == null) {
-            if (other.nome != null)
-                return false;
-        } else if (!nome.equals(other.nome))
-            return false;
-        if (tipo != other.tipo)
-            return false;
-        return true;
+    public String toString() {
+        return "ItemPedido{" +
+                "tipo=" + tipo +
+                ", nome='" + nome + '\'' +
+                '}';
     }
-
-    
     
 }
