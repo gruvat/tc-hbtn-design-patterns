@@ -3,10 +3,10 @@ public class Impressao {
     private int paginasTotais;
     private int paginasColoridas;
     private boolean ehFrenteVerso;
-    private Double valorColoridasFrenteVerso;
-    private Double valorPretoBrancoFrenteVerso;
-    private Double valorColoridasFrenteApenas;
-    private Double valorPretoBrancoFrenteApenas;
+    private double valorColoridasFrenteVerso;
+    private double valorPretoBrancoFrenteVerso;
+    private double valorColoridasFrenteApenas;
+    private double valorPretoBrancoFrenteApenas;
 
     public Impressao() {
         paginasTotais = 0;
