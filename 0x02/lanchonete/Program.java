@@ -4,8 +4,9 @@ public class Program {
 
         builder1.setBrinde(TipoBrinde.CARRO);
         builder1.setBatata(TamanhoBatata.GRANDE);
-        builder1.setBebida(TipoBebida.COCA_COLA);
         builder1.setLanche(TipoLanche.CHEESEBURGUER);
+        builder1.setBebida(TipoBebida.COCA_COLA);
+        
 
         Pedido pedido1 = builder1.build();
 
