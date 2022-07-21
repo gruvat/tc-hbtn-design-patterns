@@ -1,14 +1,16 @@
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class Pedido {
 
-    private HashSet<ItemPedido> itensDentroCaixa;
-    private HashSet<ItemPedido> itensForaCaixa;
+    private Set<ItemPedido> itensDentroCaixa;
+    private Set<ItemPedido> itensForaCaixa;
 
 
     public Pedido() {
-            itensDentroCaixa = new HashSet<>();
-            itensForaCaixa = new HashSet<>();
+            itensDentroCaixa = new LinkedHashSet<>();
+            itensForaCaixa = new LinkedHashSet<>();
     }
 
     public void adicionarItemDentroCaixa(ItemPedido item) {
