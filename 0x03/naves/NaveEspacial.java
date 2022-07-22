@@ -10,7 +10,7 @@ public class NaveEspacial {
 
     @Override
     public String toString() {
-        return "Saude: " + this.getSaude() + " - Ataque: " + this.getAtaque();
+        return String.format("Saude: %d - Ataque: %d", this.getSaude(), this.getAtaque());
     }
 
     public int getSaude() {
