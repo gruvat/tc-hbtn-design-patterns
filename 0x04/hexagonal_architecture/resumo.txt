@@ -1,0 +1,11 @@
+[Q1]
+A Arquitetura Hexagonal foi proposta por Alistar Cockburn em 2005 com o objetivo de tratar problematicas conhecidas da programação orientada a objetos.
+
+[Q2]
+O principal benefício advindo do uso desta arquitetura é a redução do acoplamento, o que aumenta a testabilidade e a facilidade em realizar mudanças das ferramentas usadas no desenvolvimento.
+
+[Q3]
+É importanto enfatizar o papel histórico da arquitetura Hexagonal que, quando lançada, trouxe novos conceitos e paradigmas para a área de arquitetura de software, logo, ela influenciou a arquitetura Onion (2008) e posteriormente a arquitetura Clean (2012). As principais diferenças entre as duas, hexagonal e clean, é que na clean as camadas são representadas como circulos concentricos, ao invés do tardicional hexagono, as camadas internas tornaram-se exclusivas para entidades e casos de uso (business logic) e os adapters e interfaces foram isolados nas camadas mais externas. Ademais o pricipio de inversão de dependencia, o D em SOLID, deve sempre existir entre as camadas mais externas e internas.
+
+[Q4]
+Sim e Não, a arquitetura hexagonal até pode ser usada em qualquer projeto porém a real pergunta é se há necessidade. A arquitetura, como descrito no primeiro parágrafo, surgiu para elucidar um problema advindo da utilizadas de POO, portanto, pensando exclusivamente neste ponto, a resposta séria sim, qualquer projeto pode utilizá-la. Entretando, muitas vezes tais problemas da POO só se tornam uma real dor de cabeça quando a evolução, modificação e testabilidade da aplicação possuem níveis mais intensos, ou seja, é uma grande aplicação, portanto, para projetos mais simples e que não existe a previsibilidade de evolução a arquitetura hexagonal pode acarretar em muito trabalho desnecessário para resolver problemas imaginários que nunca se concretizariam.
